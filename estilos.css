@@ -1,0 +1,267 @@
+@font-face{
+	font-family: "DancingScript-Regular.ttf";
+	src: url("DancingScript-Regular.ttf");
+}
+@font-face{
+	font-family: "DancingScript-Bold.ttf";
+	src: url("DancingScript-Bold.ttf");
+}
+body{
+	background-color: black;
+	font-family: "DancingScript-Regular.ttf";
+}
+.contenido{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column wrap;
+	flex-flow: column wrap;
+	max-width: 900px;
+	min-width: 400px;
+	padding-right: 10px;
+	position: relative;
+	left: 15%;
+}
+#encabezado{
+	padding: 40px;
+	background-color: #5b7989;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#enlaces{
+	float: right;
+}
+.comienzo{
+	font-family: "DancingScript-Bold.ttf";
+	font-size: 1.5em;
+	text-align: left;
+	color: white;
+	padding: 1px;
+}
+nav a{
+	color: white;
+	font-size: 1.5em;
+	text-shadow: 1px 1px 2px, 0 0 30px #02010a;
+	padding: 3px;
+}
+.central{
+	width: 100%;
+	height: 350px;
+	background-color: #82c3a6;
+}
+#imagen-central{
+	border: 2px solid black;
+	box-shadow: 1px 1px 1px 1px #82c3a6;
+	height: 80%;
+	position: relative;
+	top: 10%;
+	bottom: 5%;
+	left: 25%;
+}
+#retrato-paisaje{
+	height: 100%;
+	height: 350px;
+	display: flex;
+	flex-direction: column;
+	background-color: #d5c75f;
+}
+.retrato-paisaje{
+	text-align: center;
+	width: 100%;	
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	left: 15%;
+	top: 8%;
+}
+.paisaje, .retrato{
+	padding: 10px;
+}
+#paisaje{
+	border: 2px solid black;
+	box-shadow: 1px 1px 1px 1px black;
+	width: 90%;
+	height: 200px;
+}
+#retrato{
+	border: 2px solid black;
+	box-shadow: 1px 1px 1px 1px black;
+	width: 100%;
+	height: 200px;
+}
+
+div > a{
+	font-family: "DancingScript-Regular.ttf";
+	color: black;
+	font-size: 1.5em;
+}
+footer{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	background-color: #C6d5c5;
+	font-size: 0.90em;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+footer img{
+	width: 20px;
+	border-radius: 70px;
+}
+footer div{
+	padding: 20px;
+}
+p, #redes-sociales, #derechos{
+	text-align: center;
+}
+@keyframes paisaje-animacion{
+	from{
+		border: 2px solid black;
+	}
+	to{
+	border: 2px solid black;
+	box-shadow: 1px 1px 1px 1px #82c3a6;
+	transform: rotate(0deg);
+	}
+}
+#paisaje:hover{
+	border: 2px solid black;
+	box-shadow: 2px 2px 2px 2px #82c3a6;
+	transform: rotate(10deg);
+	animation-name:paisaje-animacion;
+	animation-duration: 2s;
+}
+@keyframes retrato-animacion{
+	from{
+		border: 2px solid black;
+		box-shadow: 1px 1px 1px 1px #82c3a6;
+		
+	}to{
+		border: 2px solid black;
+		box-shadow: 1px 1px 1px 1px #82c3a6;
+		transform: translate(5px, -20px);
+	}
+}
+#retrato:hover{
+	border: 2px solid black;
+	box-shadow: 1px 1px 1px 1px #82c3a6;
+	transform: translate(5px, -20px);
+	animation-name:paisaje-animacion;
+	animation-duration: 2s;
+}
+@media(max-width: 600px){
+	#enlaces{
+		display: none;
+	}
+}
+@media(max-width: 600px){
+	.retrato-paisaje,footer{
+		display: flex;
+		flex-direction: column;
+	}
+}
+@media(max-width: 600px){
+	.retrato-paisaje{
+		width: 70%;
+		position: relative;
+		right: 10%;
+	}
+
+}
+@media(max-width: 600px){
+	#retrato-paisaje{
+		height: 630px;
+	}
+}
+@media(max-width: 600px){
+	#imagen-central{
+		width: 60%;
+	}
+}
+/*Trabajando con los ajustes de la pagina de paisae*/
+.pagina-paisaje1{
+	width: 100%;
+	height: 400px;
+	display: flex;
+	flex-direction: row;
+	background-color: #d5c75f;
+}
+.pagina-paisaje2, .pagina-paisaje3,.pagina-paisaje4{
+	padding: 5px;
+
+}
+#paisaje1, #paisaje2, #paisaje3, #paisaje4, #paisaje5, #paisaje6{
+	border: 2px solid black;
+	box-shadow: 1px 1px 1px 1px black;
+}
+@media(max-width: 600px){
+	.pagina-paisaje1{
+		display: flex;
+		flex-direction: column;
+		height: 850px;
+
+	}
+}
+@media(max-width: 600px){
+	#paisaje1, #paisaje2, #paisaje3, #paisaje4, #paisaje5, #paisaje6{
+		width: 50%;
+		position: relative;
+		left: 25%;
+	}
+}
+#paisaje1{
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+#paisaje2, #paisaje4, #paisaje6{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+#paisaje3{
+	-webkit-filter: sepia(90%);
+	filter: sepia(90%);
+}
+/*Trabajando con los ajuste de la pagina retrato*/
+#pagina-retrato1{
+	width: 100%;
+	height: 450px;
+	display: flex;
+	flex-direction: row;
+	background-color: #d5c75f;
+}
+.pagina-retrato2, .pagina-retrato3,.pagina-retrato4{
+	padding-top: 10px;
+	position: relative;
+	left: 2%;
+
+}
+#retrato1, #retrato2, #retrato3, #retrato4, #retrato5, #retrato6{
+	border: 2px solid black;
+	box-shadow: 1px 1px 1px 1px black;
+}
+@media(max-width: 600px){
+	#pagina-retrato1{
+		display: flex;
+		flex-direction: column;
+		height: 1050px;
+
+	}
+}
+@media(max-width: 600px){
+	#retrato1, #retrato2, #retrato3, #retrato4, #retrato5, #retrato6{
+		width: 50%;
+		position: relative;
+		left: 25%;
+	}
+}
+#retrato1{
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+}
+#retrato2, #retrato4, #retrato6{
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+#retrato3{
+	-webkit-filter: sepia(90%);
+	filter: sepia(90%);
+}
